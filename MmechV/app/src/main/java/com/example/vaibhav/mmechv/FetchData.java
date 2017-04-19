@@ -142,8 +142,7 @@ public class FetchData extends AppCompatActivity {
                         sb.append(line + "\n");
                     }
                     result = sb.toString();
-                } catch (Exception e) {
-                    // Oops
+                } catch (Exception e) 
                 }
                 finally {
                     try{if(inputStream != null)inputStream.close();}catch(Exception squish){}
