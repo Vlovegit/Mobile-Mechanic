@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class SignUpUser extends AppCompatActivity {
 
 
-    EditText tvName, etEmail1, etPassword1,etConfirmPassword;
+    EditText tvName, etContact, etEmail1, etPassword1,etConfirmPassword;
     View myView;
     View btnSubmit1;
     @Override
@@ -23,7 +23,7 @@ public class SignUpUser extends AppCompatActivity {
 
         btnSubmit1=findViewById(R.id.btnSubmit1);
         tvName= (EditText) findViewById(R.id.tvName);
-       
+        etContact= (EditText) findViewById(R.id.etContact);
         etEmail1= (EditText) findViewById(R.id.etEmail1);
         etPassword1= (EditText) findViewById(R.id.etPassword1);
         etConfirmPassword= (EditText) findViewById(R.id.etConfirmPassword);
@@ -34,7 +34,7 @@ public class SignUpUser extends AppCompatActivity {
             public void onClick(View v) {
 
                 String name = tvName.getText().toString();
-         
+                String contact = etContact.getText().toString();
                 String email1 = etEmail1.getText().toString();
                 String password = etPassword1.getText().toString();
                 String Confirmpassword = etConfirmPassword.getText().toString();
@@ -43,7 +43,9 @@ public class SignUpUser extends AppCompatActivity {
                 if (tvName.getText().toString().length() == 0) {
                     tvName.setError("Name Required");
                     tvName.requestFocus();
-                
+                } else if (etContact.getText().toString().length() == 0) {
+                    etContact.setError("Invalid Contact");
+                    etContact.requestFocus();
                 } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail1.getText().toString()).matches()) {
                     etEmail1.setError("Invalid Email ID");
                     etEmail1.requestFocus();
