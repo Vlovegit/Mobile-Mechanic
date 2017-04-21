@@ -25,6 +25,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Location of Assistance"
+        android:ems="10"
+        android:layout_below="@+id/etName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:id="@+id/etLocation" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
         android:hint="Name of the mechanic"
         android:ems="10"
         android:layout_marginTop="53dp"

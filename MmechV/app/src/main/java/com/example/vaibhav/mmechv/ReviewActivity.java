@@ -14,7 +14,7 @@ import static com.example.sahil.mobilemechanic.R.styleable.View;
 
 public class ReviewActivity extends AppCompatActivity {
 
-    EditText etName, etEmail, etReview;
+    EditText etName, etLocation, etEmail, etReview;
     TextView tvRating;
     Button btSubmit;
     RatingBar ratingBar;
@@ -27,6 +27,7 @@ public class ReviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_review);
 
         etName = (EditText) findViewById(R.id.etName);
+        etLocation = (EditText) findViewById(R.id.etLocation);
         etEmail = (EditText) findViewById(R.id.etEmail);
         etReview = (EditText) findViewById(R.id.etReview);
         tvRating = (TextView) findViewById(R.id.tvRating);
@@ -42,7 +43,10 @@ public class ReviewActivity extends AppCompatActivity {
                 if (etName.getText().toString().length() == 0) {
                     etName.setError("Name Required");
                     etName.requestFocus();
-                } else (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches())
+                } else if (etLocation.getText().toString().length() == 0) {
+                    etLocation.setError("Invalid Location");
+                    etLocation.requestFocus();
+                } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches())
                 {
                     etEmail.setError("Invalid Email ID");
                     etEmail.requestFocus();
