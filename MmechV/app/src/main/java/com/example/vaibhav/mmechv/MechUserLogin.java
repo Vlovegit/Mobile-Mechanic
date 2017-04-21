@@ -1,3 +1,4 @@
+
 package com.example.vaibhav.mobilemechanic;
 
 import android.content.Intent;
@@ -29,7 +30,17 @@ public class MechUserLogin extends AppCompatActivity {
                 String Password=etPassword.getText().toString();
 
 
-              
+                if(!Patterns.EMAIL_ADDRESS.matcher(etEmail.getText().toString()).matches())
+                {
+                    etEmail.setError("Invalid Email ID");
+                    etEmail.requestFocus();
+                }
+                else if(etPassword.getText().toString().length()==0)
+                {
+                    etPassword.setError("Password Required");
+                    etPassword.requestFocus();
+                }
+                else {
                     Intent i = new Intent(MechUserLogin.this, MainActivity.class);
                     startActivity(i);
                 }
