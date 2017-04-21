@@ -4,6 +4,8 @@
     android:layout_centerVertical="true"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+	
+	
 
 
     <ImageView
@@ -15,6 +17,8 @@
         android:maxWidth="50dp"
         app:srcCompat="@drawable/sid1"
         android:id="@+id/imageView2" />
+		
+		
 
     <TextView
         android:text="Madan Motors"
@@ -29,6 +33,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignLeft="@+id/textView9"
         android:layout_alignStart="@+id/textView9" />
+		
+		
 
     <TextView
         android:text="Madan Motors , Near Honda Showroom , Suman Nagar , Kurla east "
@@ -40,6 +46,8 @@
 
         android:layout_alignLeft="@+id/ratingBar"
         android:layout_alignStart="@+id/ratingBar" />
+		
+		
 
     <RatingBar
         android:layout_width="wrap_content"
@@ -50,6 +58,8 @@
         android:layout_below="@+id/textView9"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+		
+		
 
     <TextView
         android:text="Contact : 9899972725"
@@ -60,6 +70,8 @@
         android:id="@+id/textView12"
         android:layout_alignLeft="@+id/ratingBar"
         android:layout_alignStart="@+id/ratingBar" />
+		
+		
 
     <Button
         android:text="Call"
@@ -71,6 +83,8 @@
         android:layout_alignEnd="@+id/imageView2"
         android:layout_marginTop="300dp"
         android:id="@+id/button3" />
+		
+		
 
     <Button
         android:text="Open in Maps"
@@ -82,5 +96,8 @@
         android:layout_marginRight="44dp"
         android:layout_marginEnd="44dp"
         android:id="@+id/button4" />
+		
+	<!--bhavna bajaj updated -->	
+	
 
 </RelativeLayout>
